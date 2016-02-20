@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NYUSecurity2016.iml" filepath="$PROJECT_DIR$/NYUSecurity2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WWFF.iml" filepath="$PROJECT_DIR$/WWFF.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
