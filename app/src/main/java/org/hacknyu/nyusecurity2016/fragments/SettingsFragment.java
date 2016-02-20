@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import org.hacknyu.nyusecurity2016.Constants;
+import org.hacknyu.nyusecurity2016.MenuAction;
 import org.hacknyu.nyusecurity2016.R;
 
 /**
@@ -45,6 +46,8 @@ public class SettingsFragment extends PreferenceFragment {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true; // already in settings fragment
+        } else if (id == R.id.action_about) {
+            MenuAction.showAboutDialog(getActivity());
         }
 
         return super.onOptionsItemSelected(item);

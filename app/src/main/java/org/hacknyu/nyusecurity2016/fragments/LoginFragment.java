@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import org.hacknyu.nyusecurity2016.Constants;
+import org.hacknyu.nyusecurity2016.MenuAction;
 import org.hacknyu.nyusecurity2016.R;
 
 /**
@@ -70,6 +71,8 @@ public class LoginFragment extends Fragment {
                         .commit();
             }
             return true;
+        } else if (id == R.id.action_about) {
+            MenuAction.showAboutDialog(getActivity());
         }
 
         return super.onOptionsItemSelected(item);
