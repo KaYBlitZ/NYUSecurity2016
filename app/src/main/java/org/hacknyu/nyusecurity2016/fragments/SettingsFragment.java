@@ -1,14 +1,7 @@
 package org.hacknyu.nyusecurity2016.fragments;
 
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -45,7 +38,19 @@ public class SettingsFragment extends PreferenceFragment {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true; // already in settings fragment
+            PreferenceFragment fragment = (PreferenceFragment) getFragmentManager().findFragmentByTag(Constants.TAG_SETTINGS);
+            if (fragment == null) {
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.layout, new SettingsFragment(), Constants.TAG_SETTINGS)
+                        .addToBackStack(null)
+                        .commit();
+            } else {
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.layout, fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+            return true;
         } else if (id == R.id.action_about) {
             MenuAction.showAboutDialog(getActivity());
         }

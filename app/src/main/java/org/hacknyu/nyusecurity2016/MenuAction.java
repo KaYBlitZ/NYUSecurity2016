@@ -1,8 +1,7 @@
 package org.hacknyu.nyusecurity2016;
 
+import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 
 /**
  * Created by Kenneth on 2/20/2016.
